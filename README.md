@@ -1,1 +1,1 @@
-# Lets Grow More Intership Project
+# Lets Grow More Internship Project
