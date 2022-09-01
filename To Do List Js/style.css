@@ -9,7 +9,7 @@ body{
     flex-direction: row;
     justify-content: center;
     border: 5px solid black;
-    width:100;
+    width:100%;
     margin-bottom: 10px;
 }
 .container #input{
@@ -31,10 +31,33 @@ body{
     height:100%;
     font-size:40px;
 }
-#to-do{
+#todolistcontainer{
     border:1px solid black;
     width:80%;
-    height: 300px;
+    height: 100px;
     margin-top:12px;
     margin:auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 12%;
+}
+#tasktodo{
+    font-size:150%;
+    width:25%;
+    align-self: center;
+    margin: auto;
+
+}
+#checkbox-list{
+    width:8%;
+}
+#checkbox-list:checked{
+   accent-color: blue;
+}
+#todoicon{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width:12%;
+    font-size:50px;
 }
