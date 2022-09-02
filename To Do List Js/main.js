@@ -10,6 +10,9 @@ function createlist()
 
 
 }
+document.createEventListner("click",function(){
+    addEventListener("click",createlist);
+};
 function deletelist()
 {
     document.querySelector("#todolistcontainer").remove();
@@ -22,7 +25,7 @@ function complete()
     {
         document.getElementById("tasktodo").style.textDecoration="line-through";
         document.getElementById("tasktodo").style.color="grey";
-        document.getElementById("checkbox-list").style.display="none";
+        document.getElementById("todolistcontainer").style.backgroundColor="blue";
     }
 
 }
