@@ -10,17 +10,19 @@ function createlist()
 
 
 }
-function deletelist(e)
+function deletelist()
 {
-    document.getElementById("todolistcontainer").remove();
+    document.querySelector("#todolistcontainer").remove();
     
 }
 function complete()
 {
-    document.getElementById("tasktodo").style.textDecoration = "line-through";
-    document.getElementById("tasktodo").style.textDecorationColor = "black";
-    document.getElementById("todolistcontainer").style.backgroundColor="blue";
-    document.getElementById("todoicon").style.color="white";
-    document.getElementById("tasktodo").style.color="white";
-    document.getElementById("checkbox-list").checked=true;
+
+    if(document.getElementById("checkbox-list").checked)
+    {
+        document.getElementById("tasktodo").style.textDecoration="line-through";
+        document.getElementById("tasktodo").style.color="grey";
+        document.getElementById("checkbox-list").style.backgroundColor="grey";
+    }
+
 }
