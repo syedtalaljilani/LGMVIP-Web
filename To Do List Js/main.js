@@ -21,11 +21,16 @@ function deletelist()
 function complete()
 {
 
-    if(document.getElementById("checkbox-list").checked)
+    if(document.getElementById("checkbox-list.parentNode").checked)
     {
         document.getElementById("tasktodo").style.textDecoration="line-through";
         document.getElementById("tasktodo").style.color="grey";
         document.getElementById("todolistcontainer").style.backgroundColor="blue";
+    }
+    else{
+        document.getElementById("tasktodo").style.textDecoration="none";
+        document.getElementById("tasktodo").style.color="black";
+        document.getElementById("todolistcontainer").style.backgroundColor="white";
     }
 
 }
