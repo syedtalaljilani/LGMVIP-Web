@@ -5,12 +5,15 @@ function createlist()
    <p id="tasktodo"></p>
    <i class="fa-sharp fa-solid fa-xmark" id="todoicon" onclick="deletelist()"></i>
    </div>`);
-   document.getElementById("tasktodo").innerHTML=document.getElementById("input").value;
+    document.getElementById("tasktodo").textContent=document.getElementById("input").value;
+
+
 
 }
-function deletelist()
+function deletelist(e)
 {
     document.getElementById("todolistcontainer").remove();
+    
 }
 function complete()
 {
