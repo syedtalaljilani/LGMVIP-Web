@@ -10,9 +10,6 @@ function createlist()
 
 
 }
-document.createEventListner("click",function(){
-    addEventListener("click",createlist);
-};
 function deletelist()
 {
     document.querySelector("#todolistcontainer").remove();
