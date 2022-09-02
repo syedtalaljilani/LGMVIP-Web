@@ -22,7 +22,7 @@ function complete()
     {
         document.getElementById("tasktodo").style.textDecoration="line-through";
         document.getElementById("tasktodo").style.color="grey";
-        document.getElementById("checkbox-list").style.backgroundColor="grey";
+        document.getElementById("checkbox-list").style.display="none";
     }
 
 }
