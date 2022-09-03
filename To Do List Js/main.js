@@ -18,7 +18,6 @@ function completelist(e){
          e.nextElementSibling.style.color = "white";
          e.nextElementSibling.style.textDecorationColor = "black";
          container.style.backgroundColor="blue";
-         icon.style.display="none";
 
    }
    else{
