@@ -31,7 +31,7 @@ body{
     height:100%;
     font-size:40px;
 }
-#todolistcontainer{
+.todolistcontainer{
     border:1px solid black;
     width:80%;
     height: 100px;
@@ -41,23 +41,24 @@ body{
     flex-direction: row;
     margin-top: 12%;
 }
-#tasktodo{
+.todotask{
     font-size:150%;
     width:30%;
     align-self: center;
     margin: auto;
 
 }
-#checkbox-list{
+.checkbox{
     width:8%;
 }
-#checkbox-list:checked{
+.checkbox:checked{
    accent-color: blue;
 }
-#todoicon{
+.crossicon{
     display: flex;
     flex-direction: row;
     align-self: center;
     width:12%;
     font-size:50px;
 }
+

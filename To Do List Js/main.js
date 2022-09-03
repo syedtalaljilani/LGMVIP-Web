@@ -1,33 +1,29 @@
 function createlist()
-{
-   document.getElementById("tolist").insertAdjacentHTML ("afterend",`<div id="todolistcontainer">
-   <input type="checkbox" id="checkbox-list" onclick="complete()">  
-   <p id="tasktodo"></p>
-   <i class="fa-sharp fa-solid fa-xmark" id="todoicon" onclick="deletelist()"></i>
+{  
+   var todolist = document.getElementById("input").value;
+   document.getElementById("tolist").insertAdjacentHTML("beforeend", `<div class="todolistcontainer">
+   <input type="checkbox" class="checkbox" onclick="completelist(this)">
+    <p class="todotask">${todolist}</p>
+    <i class="fa-sharp fa-solid fa-xmark crossicon" onclick="deletelist(this)"</i>
    </div>`);
-    document.getElementById("tasktodo").textContent=document.getElementById("input").value;
-
-
-
 }
-function deletelist()
-{
-    document.querySelector("#todolistcontainer").remove();
-    
+function deletelist(e){
+    e.closest(".todolistcontainer").remove();//find closest parent element with class todolistcontainer and remove it
 }
-function complete()
-{
+function completelist(e){
+    let container=e.closest(".todolistcontainer");
+   if(e.checked){
+      
+       e.nextElementSibling.style.textDecoration = "line-through";
+         e.nextElementSibling.style.color = "grey";
+         container.style.backgroundColor="blue";
 
-    if(document.getElementById("checkbox-list.parentNode").checked)
-    {
-        document.getElementById("tasktodo").style.textDecoration="line-through";
-        document.getElementById("tasktodo").style.color="grey";
-        document.getElementById("todolistcontainer").style.backgroundColor="blue";
-    }
-    else{
-        document.getElementById("tasktodo").style.textDecoration="none";
-        document.getElementById("tasktodo").style.color="black";
-        document.getElementById("todolistcontainer").style.backgroundColor="white";
-    }
+   }
+   else{
+         e.nextElementSibling.style.textDecoration = "none";
+         e.nextElementSibling.style.color = "black";
+         container.style.backgroundColor="white";
 
+   }
 }
+ 
