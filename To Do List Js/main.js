@@ -12,11 +12,13 @@ function deletelist(e){
 }
 function completelist(e){
     let container=e.closest(".todolistcontainer");
+    
    if(e.checked){
-      
        e.nextElementSibling.style.textDecoration = "line-through";
-         e.nextElementSibling.style.color = "grey";
+         e.nextElementSibling.style.color = "white";
+         e.nextElementSibling.style.textDecorationColor = "black";
          container.style.backgroundColor="blue";
+         icon.style.display="none";
 
    }
    else{
@@ -26,4 +28,7 @@ function completelist(e){
 
    }
 }
- 
+
+window.addEventListener('load',function(){
+    document.getElementById("buttontodo").addEventListener("click", createlist);
+});
