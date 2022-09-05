@@ -2,7 +2,7 @@ function createlist()
 {  
    var todolist = document.getElementById("input").value;
    document.getElementById("tolist").insertAdjacentHTML("beforeend", `<div class="todolistcontainer">
-   <input type="checkbox" class="checkbox" onclick="completelist(this)">
+   <input type="checkbox" class="checkbox" onclick="completelist(this)" id="checkbox">
     <p class="todotask">${todolist}</p>
     <i class="fa-sharp fa-solid fa-xmark crossicon" onclick="deletelist(this)"</i>
    </div>`);
@@ -18,12 +18,15 @@ function completelist(e){
          e.nextElementSibling.style.color = "white";
          e.nextElementSibling.style.textDecorationColor = "black";
          container.style.backgroundColor="blue";
+         container.style.color="white";
+        
 
    }
    else{
          e.nextElementSibling.style.textDecoration = "none";
          e.nextElementSibling.style.color = "black";
          container.style.backgroundColor="white";
+         checkbox.style.backgroundColor="red";
 
    }
 }
